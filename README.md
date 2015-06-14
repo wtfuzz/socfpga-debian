@@ -77,3 +77,11 @@ Copy rootfs/* to SD card root partition
 
 Install SD card into de0-nano-soc board
 
+### Post installation
+#### Setup Networking
+Create /etc/network/interfaces.d/eth0 containing network configuration
+#### Fix locales
+```sh
+apt-get install locales
+dpkg-reconfigure locales
+```
