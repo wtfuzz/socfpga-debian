@@ -6,15 +6,22 @@ The default kernel doesn't have CONFIG_FHANDLE enabled for Debian systemd, so it
 
 ### Install Dependencies
 
+```
 wget https://launchpad.net/linaro-toolchain-binaries/trunk/2012.11/+download/gcc-linaro-arm-linux-gnueabihf-4.7-2012.11-20121123_linux.tar.bz2
 tar jxfv gcc-linaro-arm-linux-gnueabihf-4.7-2012.11-20121123_linux.tar.bz2
 
+```
+
+#### Install packages, setup cross compiler path
+```
 sudo apt-get install device-tree-compiler
 
 export PATH=`pwd`/gcc-linaro-arm-linux-gnueabihf-4.7-2012.11-20121123_linux/bin:$PATH
+```
 
 ### Compile u-boot
 
+```
 git clone https://github.com/altera-opensource/u-boot-socfpga.git
 
 export CROSS_COMPILE=arm-linux-gnueabihf-
@@ -25,6 +32,7 @@ make mrproper
 ./MAKEALL socfpga_cyclone5
 
 export PATH=`pwd`/u-boot-socfpga/tools:$PATH
+```
 
 ### Compile kernel
 
@@ -51,17 +59,20 @@ make ARCH=arm modules
 
 #### Copy kernel and DTB
 
+```
 Copy the files to the SD card boot partition
 arch/arm/boot/zImage
 arch/arm/boot/dts/socfpga_cyclone5_socdk.dtb to socfpga.dtb
-
+```
 
 ### Create rootfs
 
 Requires binfmt-support
 
+```
 sudo qemu-debootstrap --no-check-gpg --arch=armhf jessie rootfs ftp://ftp.debian.org/debian/
 chroot rootfs
+```
 
 Once inside the chroot
 
@@ -72,7 +83,6 @@ Once inside the chroot
 
 exit chroot
 
-Remove all files or format the SD card root partition
 Copy rootfs/* to SD card root partition
 
 Install SD card into de0-nano-soc board
