@@ -3,6 +3,8 @@
 #TOOLCHAIN_URL="https://launchpad.net/linaro-toolchain-binaries/trunk/2013.10/+download/gcc-linaro-arm-linux-gnueabihf-4.8-2013.10_linux.tar.bz2"
 #TOOLCHAIN_SHA1="93a74cbb3b90d4b3d52816871c9e9656dd71806f"
 
+#TOOLCHAIN_URL="https://releases.linaro.org/components/toolchain/binaries/4.9-2016.02/arm-linux-gnueabihf/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf.tar.xz"
+
 TOOLCHAIN_URL="https://releases.linaro.org/components/toolchain/binaries/latest/arm-linux-gnueabihf/gcc-linaro-6.2.1-2016.11-x86_64_arm-linux-gnueabihf.tar.xz"
 TOOLCHAIN_SHA1="15ebc22d33557b67f8a8170c1921a3159012acc9"
 
@@ -13,7 +15,7 @@ TOOLCHAIN_ROOT="`pwd`/tools/gcc-linaro-6.2.1-2016.11-x86_64_arm-linux-gnueabihf"
 echo $TOOLCHAIN_ROOT
 
 sudo apt update
-sudo apt install wget device-tree-compiler git binfmt-support qemu qemu-user-static debootstrap
+sudo apt install wget device-tree-compiler git binfmt-support qemu qemu-user-static debootstrap libncurses-dev
 
 # Check if tools/gcc-arm-linux.tar.bz2 already exists
 echo "$TOOLCHAIN_SHA1 $TOOLCHAIN_LOCAL" | sha1sum -c -

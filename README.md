@@ -52,9 +52,9 @@ make ARCH=arm menuconfig
 General setup -> open by fhandle syscalls
 
 ```sh
-make -j4 ARCH=arm uImage LOADADDR=0x8000
+make -j8 ARCH=arm uImage LOADADDR=0x8000
 make ARCH=arm dtbs
-make ARCH=arm modules
+make -j8 ARCH=arm modules
 ```
 
 #### Copy kernel and DTB
