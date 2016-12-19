@@ -38,4 +38,3 @@ tar Jxf $TOOLCHAIN_LOCAL -C tools
 #git clone https://github.com/altera-opensource/u-boot-socfpga.git src/u-boot-socfpga
 #git clone https://github.com/altera-opensource/linux-socfpga.git src/linux-socfpga
 
-
