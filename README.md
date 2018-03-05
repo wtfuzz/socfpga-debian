@@ -45,7 +45,7 @@ export PATH=`pwd`/u-boot-socfpga/tools:$PATH
 ```sh
 git clone https://github.com/altera-opensource/linux-socfpga.git
 cd linux-socfpga
-git checkout socfpga-3.15
+git checkout socfpga-4.15
 make ARCH=arm socfpga_defconfig
 ```
 
