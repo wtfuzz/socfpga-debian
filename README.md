@@ -6,6 +6,11 @@ The default kernel doesn't have CONFIG_FHANDLE enabled for Debian systemd, so it
 
 ### Install Dependencies
 
+#### Compiler Toolchain
+
+On Ubuntu 17.10:
+`sudo apt install gcc-arm-linux-gnueabihf`
+
 ```
 wget https://launchpad.net/linaro-toolchain-binaries/trunk/2012.11/+download/gcc-linaro-arm-linux-gnueabihf-4.7-2012.11-20121123_linux.tar.bz2
 tar jxfv gcc-linaro-arm-linux-gnueabihf-4.7-2012.11-20121123_linux.tar.bz2
