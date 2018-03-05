@@ -43,24 +43,16 @@ export PATH=`pwd`/u-boot-socfpga/tools:$PATH
 ### Compile kernel
 
 ```sh
+export ARCH=arm
+export CROSS_COMPILE=arm-linux-gnueabihf-
+
 git clone https://github.com/altera-opensource/linux-socfpga.git
 cd linux-socfpga
 git checkout socfpga-4.15
-make ARCH=arm socfpga_defconfig
-```
-
-#### Enable CONFIG_FHANDLE
-
-```sh
-make ARCH=arm menuconfig
-```
-
-General setup -> open by fhandle syscalls
-
-```sh
-make -j8 ARCH=arm uImage LOADADDR=0x8000
-make ARCH=arm dtbs
-make -j8 ARCH=arm modules
+make socfpga_defconfig
+make -j8 uImage LOADADDR=0x8000
+make dtbs
+make -j8 modules
 ```
 
 #### Copy kernel and DTB
@@ -68,7 +60,7 @@ make -j8 ARCH=arm modules
 ```
 Copy the files to the SD card boot partition
 arch/arm/boot/zImage
-arch/arm/boot/dts/socfpga_cyclone5_socdk.dtb to socfpga.dtb
+arch/arm/boot/dts/socfpga_cyclone5_de0_sockit.dtb to socfpga.dtb
 ```
 
 ### Create rootfs
