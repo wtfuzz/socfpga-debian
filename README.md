@@ -76,7 +76,7 @@ arch/arm/boot/dts/socfpga_cyclone5_socdk.dtb to socfpga.dtb
 Requires binfmt-support
 
 ```
-sudo qemu-debootstrap --no-check-gpg --arch=armhf jessie rootfs ftp://ftp.debian.org/debian/
+sudo qemu-debootstrap --no-check-gpg --arch=armhf stretch rootfs ftp://ftp.debian.org/debian/
 chroot rootfs
 ```
 
