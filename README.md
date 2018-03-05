@@ -42,7 +42,7 @@ export PATH=`pwd`/u-boot-socfpga/tools:$PATH
 ### Compile kernel
 
 ```sh
-git clone git://git.rocketboards.org/linux-socfpga.git
+git clone https://github.com/altera-opensource/linux-socfpga.git
 cd linux-socfpga
 git checkout socfpga-3.15
 make ARCH=arm socfpga_defconfig
