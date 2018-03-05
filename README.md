@@ -1,8 +1,8 @@
+# Debian Linux on socfpga
+
 ## Target Hardware
 
 The test board is a Terasic de0-nano-soc
-
-The default kernel doesn't have CONFIG_FHANDLE enabled for Debian systemd, so it is required to compile a kernel.
 
 ### Install Dependencies
 
