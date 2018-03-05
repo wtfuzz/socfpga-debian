@@ -34,7 +34,8 @@ export CROSS_COMPILE=arm-linux-gnueabihf-
 cd u-boot-socfpga
 git checkout master
 make mrproper
-./MAKEALL socfpga_cyclone5
+make defconfig socfpga_de0_nano_soc_defconfig
+make -j4
 
 export PATH=`pwd`/u-boot-socfpga/tools:$PATH
 ```
