@@ -8,20 +8,8 @@ The test board is a Terasic de0-nano-soc
 
 #### Compiler Toolchain
 
-On Ubuntu 17.10:
-`sudo apt install gcc-arm-linux-gnueabihf`
-
 ```
-wget https://launchpad.net/linaro-toolchain-binaries/trunk/2012.11/+download/gcc-linaro-arm-linux-gnueabihf-4.7-2012.11-20121123_linux.tar.bz2
-tar jxfv gcc-linaro-arm-linux-gnueabihf-4.7-2012.11-20121123_linux.tar.bz2
-
-```
-
-#### Install packages, setup cross compiler path
-```
-sudo apt-get install device-tree-compiler
-
-export PATH=`pwd`/gcc-linaro-arm-linux-gnueabihf-4.7-2012.11-20121123_linux/bin:$PATH
+sudo apt install gcc-arm-linux-gnueabihf
 ```
 
 ### Compile u-boot

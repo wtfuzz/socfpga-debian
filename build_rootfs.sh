@@ -2,5 +2,5 @@
 
 ROOT_PATH="rootfs/"
 
-sudo debootstrap --arch armhf jessie $ROOT_PATH
-sudo cp /usr/bin/qemu-arm-static rootfs/usr/bin
+sudo debootstrap --arch armhf buster $ROOT_PATH
+sudo cp /usr/bin/qemu-arm-static $ROOT_PATH/usr/bin

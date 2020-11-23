@@ -1,6 +1,4 @@
-TOOLCHAIN_ROOT="`pwd`/tools/gcc-linaro-6.2.1-2016.11-x86_64_arm-linux-gnueabihf"
-#TOOLCHAIN_ROOT="`pwd`/tools/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf"
 UBOOT_TOOLS="`pwd`/src/u-boot-socfpga/tools"
 
-export PATH="$UBOOT_TOOLS:$TOOLCHAIN_ROOT/bin:$PATH"
+export PATH="$UBOOT_TOOLS:$PATH"
 export CROSS_COMPILE=arm-linux-gnueabihf-
